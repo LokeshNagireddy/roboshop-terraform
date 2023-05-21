@@ -22,5 +22,6 @@ database_servers = {
   mysql = {
     name          = "mysql"
     instance_type = "t3.micro"
+    password      = "RoboShop@1"
   }
 }
