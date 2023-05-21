@@ -1,12 +1,24 @@
-resources = {
+app_servers = {
   frontend = {
     name          = "frontend"
     instance_type = "t3.micro"
   }
-  mongodb = {
-    name          = "mongodb"
+
+  catalogue = {
+    name          = "catalogue"
     instance_type = "t3.micro"
   }
 }
 
-env="dev"
+env = "dev"
+
+database_servers = {
+  mongodb = {
+    name          = "mongodb"
+    instance_type = "t3.micro"
+}
+  mysql = {
+    name          = "mysql"
+    instance_type = "t3.micro"
+  }
+}

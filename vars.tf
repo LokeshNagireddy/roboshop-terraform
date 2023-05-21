@@ -1,2 +1,3 @@
-variable "resources" {}
 variable "env" {}
+variable "app_servers" {}
+
