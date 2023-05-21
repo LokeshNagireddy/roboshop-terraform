@@ -28,9 +28,9 @@ resource "null_resource" "provisioner" {
 }
 
 resource "aws_route53_record" "records" {
+  zone_id = "Z0994027IXESJVMWO1F5"
   name    = "${var.server_name}-dev.lokeshnagireddy.online"
   type    = "A"
-  zone_id = "Z0994027IXESJVMWO1F5"
   ttl = 10
   records=[aws_instance.instance.private_ip]
 }
