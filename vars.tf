@@ -1,5 +1,3 @@
-variable "database_servers" {
-  type = string
-}
+variable "database_servers" {}
 variable "app_servers" {}
 variable "env" {}
