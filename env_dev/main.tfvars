@@ -1,4 +1,4 @@
-database-servers = {
+database_servers = {
 
   mongodb = {
     name          = "mongodb"
@@ -11,7 +11,7 @@ database-servers = {
   }
 }
 
-app-servers = {
+app_servers = {
 
   frontend = {
     name          = "frontend"
