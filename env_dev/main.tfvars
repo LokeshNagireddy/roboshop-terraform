@@ -22,6 +22,21 @@ app_servers = {
     name          = "catalogue"
     instance_type = "t3.micro"
   }
+
+  user = {
+    name          = "catalogue"
+    instance_type = "t3.micro"
+  }
+
+  cart = {
+    name          = "catalogue"
+    instance_type = "t3.micro"
+  }
+
+  shipping = {
+    name          = "catalogue"
+    instance_type = "t3.micro"
+  }
 }
 
 env = "dev"
