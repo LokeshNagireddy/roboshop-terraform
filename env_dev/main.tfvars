@@ -9,6 +9,17 @@ database_servers = {
     instance_type = "t3.micro"
     password      = "RoboShop@1"
   }
+
+  redis = {
+    name          = "redis"
+    instance_type = "t3.small"
+  }
+
+  rabbitmq = {
+    name          = "rabbitmq"
+    instance_type = "t3.small"
+    password      = "roboshop123"
+  }
 }
 
 app_servers = {
@@ -24,17 +35,22 @@ app_servers = {
   }
 
   user = {
-    name          = "catalogue"
+    name          = "user"
     instance_type = "t3.micro"
   }
 
   cart = {
-    name          = "catalogue"
+    name          = "cart"
     instance_type = "t3.micro"
   }
 
   shipping = {
-    name          = "catalogue"
+    name          = "shipping"
+    instance_type = "t3.micro"
+  }
+
+  payment = {
+    name          = "payment"
     instance_type = "t3.micro"
   }
 }
