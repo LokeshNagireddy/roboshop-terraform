@@ -8,7 +8,6 @@ resource "aws_instance" "instance" {
 }
 
 resource "null_resource" "provisioner" {
-  count = var.provisioner ? 1 : 0
   depends_on = [aws_instance.instance, aws_route53_record.records]
   provisioner "remote-exec" {
 
@@ -19,12 +18,7 @@ resource "null_resource" "provisioner" {
       host     = aws_instance.instance.private_ip
     }
 
-    inline = [
-      "rm -rf roboshop-shell",
-      "git clone https://github.com/LokeshNagireddy/roboshop-shell.git",
-      "cd roboshop-shell",
-      "sudo bash ${var.server_name}.sh ${var.password}"
-    ]
+    inline = var.app_type == "db" ? local.db_commands : local.app_commands
   }
 }
 
